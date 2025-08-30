@@ -5,7 +5,7 @@ export default class LoginPage {
 
     private readonly usernameTextbox = 'input[placeholder="Username"]';
     private readonly passwordTextbox = 'input[placeholder="Password"]';
-    private readonly loginButton = 'button[type="submit"]';
+    private readonly loginButton = '//button[contains(@class,"main orangehrm-login-button")]';
     private readonly loginForm = 'form[action="/web/index.php/auth/validate"][method="post"]';
 
     constructor(public page: Page) { 
@@ -36,6 +36,7 @@ export default class LoginPage {
         await this.page.locator(this.usernameTextbox).focus();
         this.page.waitForTimeout(1000); // Wait for 1000 milliseconds
         await this.page.fill(this.usernameTextbox, username);
+        this.page.waitForTimeout(1000); // Wait for 1000 milliseconds
     }
 
     async fillPassword(password: string): Promise<void> {
@@ -44,6 +45,7 @@ export default class LoginPage {
         await this.page.locator(this.passwordTextbox).focus();
         this.page.waitForTimeout(1000); // Wait for 1000 milliseconds
         await this.page.fill(this.passwordTextbox, password);
+        this.page.waitForTimeout(1000); // Wait for 1000 milliseconds
     }
 
     async clickLoginButton(): Promise<void> {
@@ -51,6 +53,8 @@ export default class LoginPage {
         await this.page.locator(this.loginButton).focus();
         this.page.waitForTimeout(1000); // Wait for 1000 milliseconds
         await this.page.click(this.loginButton);
+        this.page.waitForTimeout(1000); // Wait for 1000 milliseconds
+
     }
 
     async login (username: string, password: string): Promise<void> {
