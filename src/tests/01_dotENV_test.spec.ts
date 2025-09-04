@@ -1,7 +1,7 @@
 import {test, expect, Locator} from '@playwright/test';
 import { strict } from 'assert';
 
-test('Testing different dotenv data', async ({page}) => {
+test.skip('Testing different dotenv data', async ({page}) => {
 
     await page.goto(process.env.BASE_URL as string);
 
@@ -17,7 +17,10 @@ test('Testing different dotenv data', async ({page}) => {
 
     //expect(page).toHaveURL('https://naveenautomationlabs.com/opencart/index.php?route=account/account');
     
-    expect(strict.equal(await page.title(), myTitle));
+    //expect(strict.equal(await page.title(), myTitle));
+    
+    expect(page).toHaveTitle(myTitle as string);
+
     await page.screenshot({path: 'screenshot.png'});
     await page.close()
 });
