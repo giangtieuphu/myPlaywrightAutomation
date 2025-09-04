@@ -6,6 +6,8 @@ test('jQueryUI SelectMenu Test', async ({ page }) => {
     // const frameLocator = page.locator('//iframe[@class="demo-frame"]');
     // const frame = page.frameLocator('//iframe[@class="demo-frame"]');
 
+
+    // const frame = page.frameLocator('[class="demo-frame"]');
     const frame = page.frameLocator('iframe.demo-frame');
 
     const speedMenu = frame.locator('#speed-button');
