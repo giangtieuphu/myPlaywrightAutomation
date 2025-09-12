@@ -1,5 +1,26 @@
 import {expect, test} from '@playwright/test';
 
+test('Register a new user - Just one time!', async ({page}) => {
+    await page.goto('https://parabank.parasoft.com/');
+    const registerLink = page.getByRole('link', { name: 'Register' });
+
+    await registerLink.click();
+    await page.waitForSelector('form[id="customerForm"]');
+    await page.locator('[id="customer.firstName"]').fill('Automation');
+    await page.locator('[id="customer.lastName"]').fill('Tester');
+    await page.locator('[id="customer.address.street"]').fill('123 Testing St');
+    await page.locator('[id="customer.address.city"]').fill('Testing City');
+    await page.locator('[id="customer.address.state"]').fill('Testing State');
+    await page.locator('[id="customer.address.zipCode"]').fill('12345');
+    await page.locator('[id="customer.phoneNumber"]').fill('123-456-7890');
+    await page.locator('[id="customer.ssn"]').fill('123-45-6789');
+    await page.locator('[id="customer.username"]').fill('automationtester');
+    await page.locator('[id="customer.password"]').fill('Pwd!@#123');
+    await page.locator('[id="repeatedPassword"]').fill('Pwd!@#123');
+    await page.getByRole('button', { name: 'Register' }).click();
+    
+});
+
 test('Playwright select with Parabank app', async ({page}) => {
     await page.goto('https://parabank.parasoft.com/');
 
@@ -16,8 +37,9 @@ test('Playwright select with Parabank app', async ({page}) => {
     const transactionType = 'select[id="transactionType"]';
     const transactionTypeOptions = '//select[@id="transactionType"]/option';
 
-    await username.fill('giangtieuphu');
-    await password.fill('Dkmdkm!@#123');
+    await page.waitForSelector('form[name="login"]');
+    await username.fill('automationtester');
+    await password.fill('Pwd!@#123');
     await loginButton.click();
 
     await page.waitForSelector(accountOverviewLink);

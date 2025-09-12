@@ -9,6 +9,5 @@ test("Loop through elements", async ({ page }) => {
     for (const repoLink of await repolinks) {
         console.log(await repoLink.textContent());
     }
-
     page.close();
 });
