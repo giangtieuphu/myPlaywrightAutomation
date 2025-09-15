@@ -1,6 +1,6 @@
 import {expect, test} from '@playwright/test';
 
-test('Register a new user - Just one time!', async ({page}) => {
+test('Register a new user - Just run one time!', async ({page}) => {
     await page.goto('https://parabank.parasoft.com/');
     const registerLink = page.getByRole('link', { name: 'Register' });
 
