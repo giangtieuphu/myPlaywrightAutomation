@@ -10,9 +10,9 @@ test('Testing different dotenv data', async ({page}) => {
     const passwordField:Locator = page.locator('#input-password');
     const loginButton:Locator = page.locator('input[value="Login"]');
 
-    await page.locator('#input-email').fill(process.env.MYEMAIL as string);
-    await page.locator('#input-password').fill(process.env.MYPASSWORD as string);
-    await page.locator('input[value="Login"]').click();
+    await emailField.fill(process.env.MYEMAIL as string);
+    await passwordField.fill(process.env.MYPASSWORD as string);
+    await loginButton.click();
 
     await expect(page).toHaveURL('https://naveenautomationlabs.com/opencart/index.php?route=account/account');
 
