@@ -1,70 +1,62 @@
-import { Page } from "@playwright/test";
-import { Locator } from "@playwright/test";
+import { type Page, type Locator } from "@playwright/test"
 
 export default class LoginPage {
+    private readonly page : Page;
+    private readonly loginForm : Locator
+    private readonly usernameTextbox : Locator
+    private readonly passwordTextbox : Locator
+    private readonly loginButton : Locator
+    private readonly loginFormLocator = 'form[action="/web/index.php/auth/validate"]'
 
-    private readonly usernameTextbox = 'input[placeholder="Username"]';
-    private readonly passwordTextbox = 'input[placeholder="Password"]';
-    private readonly loginButton = '//button[contains(@class,"main orangehrm-login-button")]';
-    private readonly loginForm = 'form[action="/web/index.php/auth/validate"][method="post"]';
-
-    constructor(public page: Page) { 
-    }
+    constructor(page: Page) { 
+        this.page = page
+        this.loginForm = this.page.locator(this.loginFormLocator)
+        this.usernameTextbox = this.page.getByRole('textbox', { name: 'Username' })
+        this.passwordTextbox = this.page.getByRole('textbox', { name: 'Password' })
+        this.loginButton = this.page.getByRole('button', { name: 'Login' })
+    } 
 
     async goToLoginPage(url: string): Promise<void> {
-        await this.page.goto(url);
+        await this.page.goto(url) 
     }
 
     async waitForLoginForm(): Promise<void> {
-        await this.page.waitForSelector(this.loginForm);
-        await this.page.waitForSelector(this.usernameTextbox);
-        await this.page.waitForSelector(this.passwordTextbox);
-        await this.page.waitForSelector(this.loginButton);
+        await this.page.waitForSelector(this.loginFormLocator)
     }
 
     async isLoginFormVisible(): Promise<boolean> {
-        return (this.page.locator(this.loginForm)).isVisible();
-    }       
-
-    async getLoginFormLocator(): Promise<Locator> {
-        return this.page.locator(this.loginForm);
+        return this.loginForm.isVisible()
     }
 
     async fillUsername(username: string): Promise<void> {
-        await this.page.dblclick(this.usernameTextbox);
-        await this.page.locator(this.usernameTextbox).clear();
-        await this.page.locator(this.usernameTextbox).focus();
-        this.page.waitForTimeout(1000); // Wait for 1000 milliseconds
-        await this.page.fill(this.usernameTextbox, username);
-        this.page.waitForTimeout(1000); // Wait for 1000 milliseconds
+        await this.usernameTextbox.focus() 
+        this.page.waitForTimeout(2000)  // Wait for 2000 milliseconds
+        await this.usernameTextbox.fill(username) 
+        this.page.waitForTimeout(2000)  // Wait for 2000 milliseconds
     }
 
     async fillPassword(password: string): Promise<void> {
-        await this.page.dblclick(this.passwordTextbox);
-        await this.page.locator(this.passwordTextbox).clear();
-        await this.page.locator(this.passwordTextbox).focus();
-        this.page.waitForTimeout(1000); // Wait for 1000 milliseconds
-        await this.page.fill(this.passwordTextbox, password);
-        this.page.waitForTimeout(1000); // Wait for 1000 milliseconds
+        await this.passwordTextbox.focus() 
+        this.page.waitForTimeout(2000)  // Wait for 2000 milliseconds
+        await this.passwordTextbox.fill(password) 
+        this.page.waitForTimeout(2000)  // Wait for 2000 milliseconds
     }
 
     async clickLoginButton(): Promise<void> {
-        await this.page.locator(this.loginButton).hover();
-        await this.page.locator(this.loginButton).focus();
-        this.page.waitForTimeout(1000); // Wait for 1000 milliseconds
-        await this.page.click(this.loginButton);
-        this.page.waitForTimeout(1000); // Wait for 1000 milliseconds
-
+        await this.loginButton.focus() 
+        this.page.waitForTimeout(2000)  // Wait for 2000 milliseconds
+        await this.loginButton.click() 
+        this.page.waitForTimeout(2000)  // Wait for 2000 milliseconds
     }
 
     async login (username: string, password: string): Promise<void> {
-        await this.waitForLoginForm();
-        await this.fillUsername(username);
-        await this.fillPassword(password);
-        await this.clickLoginButton(); 
+        await this.waitForLoginForm() 
+        await this.fillUsername(username) 
+        await this.fillPassword(password) 
+        await this.clickLoginButton()  
     }
 
-    async returnPageObject(): Promise<Page> {
-        return this.page;
+    async returnPageObject() : Promise<Page> {
+        return this.page 
     }
 }
