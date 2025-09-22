@@ -5,8 +5,6 @@ test('jQueryUI SelectMenu Test', async ({ page }) => {
     
     // const frameLocator = page.locator('//iframe[@class="demo-frame"]');
     // const frame = page.frameLocator('//iframe[@class="demo-frame"]');
-
-
     // const frame = page.frameLocator('[class="demo-frame"]');
     const frame = page.frameLocator('iframe.demo-frame');
 
@@ -28,10 +26,20 @@ test('jQueryUI SelectMenu Test', async ({ page }) => {
     await fileMenu.click();
     await frame.locator('//div[.="Some unknown file"]').click();
 
+    // Choosing number 18 instead of 19 to make the screenshot comparison failed
+    // Select number 19 to make the Screenshot comparison Passed
     await numberMenu.click();
-    await frame.locator('//div[.="19"]').click();
+    await frame.locator('//div[.="18"]').click();
 
     await titleMenu.click();
-    await frame.locator('//div[.="Other"]').click();    
+    await frame.locator('//div[.="Other"]').click();
+
+    //await page.locator('//iframe[@class="demo-frame"]').screenshot({path: 'screenshots/03_jqueryui_selectMeunuFrame.png'})
+    
+    // Number menu is expected to be selected as 19, actually selected: 18. 
+    // This picture compare is going to give a Failed result
+    await expect(page.locator('//iframe[@class="demo-frame"]')).toHaveScreenshot('screenshots/03_jqueryui_selectMeunuFrame.png')
+
+    await page.close()
 });
 

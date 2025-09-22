@@ -1,10 +1,6 @@
 import { test, expect, Locator } from '@playwright/test'
 import LoginPage from '../pages/loginPage'
 import HomePage from '../pages/homePage'
-  
-test.afterAll('Close browser', async({ page }) => {
-  await page.close()
-})
 
 test('orangeHRM Login Logout test', async ({ page }) => {
   let loginPage = new LoginPage(page)
@@ -36,4 +32,6 @@ test('orangeHRM Login Logout test', async ({ page }) => {
   await test.step('Verify that the login form is displayed', async() => {
     expect(await loginPage.isLoginFormVisible()).toBeTruthy()
   })
+
+  await page.close()
 })
