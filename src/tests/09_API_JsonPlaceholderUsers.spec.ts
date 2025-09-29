@@ -1,4 +1,4 @@
-import {test, expect} from '@playwright/test';
+import {test, expect} from '@playwright/test'
 
 test("GET API - JsonPlaceholder Users", async ({request}) => {
     // Send the api request and measure the response time
@@ -42,4 +42,4 @@ test("GET API - JsonPlaceholder Users", async ({request}) => {
     for (let i = 0; i < responseObject.length; i++) {
         expect(responseObject[i].username).toBe(usernames[i])
     }
-});
+})

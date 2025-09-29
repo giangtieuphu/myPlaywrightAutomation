@@ -144,3 +144,114 @@ Call log:
 2025-09-29T01:53:22.417Z [my-label] info: Home page is loaded successfully
 2025-09-29T01:53:22.419Z [my-label] info: Home page is loaded successfully
 2025-09-29T01:53:22.423Z [my-label] info: Checked for profile picture visibility
+2025-09-29T02:01:37.175Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login)
+2025-09-29T02:01:38.190Z [my-label] info: Login form is now visible
+2025-09-29T02:01:39.546Z [my-label] info: Username entered
+2025-09-29T02:01:41.518Z [my-label] info: Password entered
+2025-09-29T02:01:42.976Z [my-label] info: Login button clicked
+2025-09-29T02:01:42.976Z [my-label] info: Logged in to orangeHRM with username: Admin
+2025-09-29T02:01:43.543Z [my-label] info: Home page is loaded successfully
+2025-09-29T02:01:43.550Z [my-label] info: Checked for profile picture visibility
+2025-09-29T02:01:45.063Z [my-label] info: User dropdown icon clicked
+2025-09-29T02:01:48.285Z [my-label] info: Logout link clicked
+2025-09-29T02:01:49.290Z [my-label] info: Logged out from OrangeHRM
+2025-09-29T02:01:49.302Z [my-label] info: Checked for profile picture visibility
+2025-09-29T02:01:49.346Z [my-label] info: Checked for login form visibility
+2025-09-29T02:02:06.851Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login)
+2025-09-29T02:02:08.377Z [my-label] info: Login form is now visible
+2025-09-29T02:02:09.744Z [my-label] info: Username entered
+2025-09-29T02:02:11.744Z [my-label] info: Password entered
+2025-09-29T02:02:13.161Z [my-label] info: Login button clicked
+2025-09-29T02:02:13.162Z [my-label] info: Logged in to orangeHRM with username: Admin
+2025-09-29T02:02:14.321Z [my-label] info: Home page is loaded successfully
+2025-09-29T02:02:20.793Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+2025-09-29T02:02:21.417Z [my-label] info: Home page is loaded successfully
+2025-09-29T02:02:21.418Z [my-label] info: Home page is loaded successfully
+2025-09-29T02:02:21.421Z [my-label] info: Checked for profile picture visibility
+2025-09-29T02:02:59.407Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login)
+2025-09-29T02:02:59.856Z [my-label] info: Login form is now visible
+2025-09-29T02:03:01.266Z [my-label] info: Username entered
+2025-09-29T02:03:03.325Z [my-label] info: Password entered
+2025-09-29T02:03:04.872Z [my-label] info: Login button clicked
+2025-09-29T02:03:04.873Z [my-label] info: Logged in to orangeHRM with username: Admin
+2025-09-29T02:03:06.040Z [my-label] info: Home page is loaded successfully
+2025-09-29T02:03:06.045Z [my-label] info: Checked for profile picture visibility
+2025-09-29T02:03:07.612Z [my-label] info: User dropdown icon clicked
+2025-09-29T02:03:11.065Z [my-label] info: Logout link clicked
+2025-09-29T02:03:12.083Z [my-label] info: Logged out from OrangeHRM
+2025-09-29T02:03:12.091Z [my-label] info: Checked for profile picture visibility
+2025-09-29T02:03:12.186Z [my-label] info: Checked for login form visibility
+2025-09-29T02:03:32.380Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login)
+2025-09-29T02:03:33.349Z [my-label] info: Login form is now visible
+2025-09-29T02:03:34.781Z [my-label] info: Username entered
+2025-09-29T02:03:36.827Z [my-label] info: Password entered
+2025-09-29T02:03:38.290Z [my-label] info: Login button clicked
+2025-09-29T02:03:38.290Z [my-label] info: Logged in to orangeHRM with username: Admin
+2025-09-29T02:03:39.453Z [my-label] info: Home page is loaded successfully
+2025-09-29T02:03:44.976Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+2025-09-29T02:03:45.588Z [my-label] info: Home page is loaded successfully
+2025-09-29T02:03:45.592Z [my-label] info: Home page is loaded successfully
+2025-09-29T02:03:45.595Z [my-label] info: Checked for profile picture visibility
+2025-09-29T02:04:19.558Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login)
+2025-09-29T02:04:21.018Z [my-label] info: Login form is now visible
+2025-09-29T02:04:22.377Z [my-label] info: Username entered
+2025-09-29T02:04:24.428Z [my-label] info: Password entered
+2025-09-29T02:04:26.080Z [my-label] info: Login button clicked
+2025-09-29T02:04:26.080Z [my-label] info: Logged in to orangeHRM with username: Admin
+2025-09-29T02:04:26.713Z [my-label] info: Home page is loaded successfully
+2025-09-29T02:04:26.719Z [my-label] info: Checked for profile picture visibility
+2025-09-29T02:04:28.642Z [my-label] info: User dropdown icon clicked
+2025-09-29T02:04:32.286Z [my-label] info: Logout link clicked
+2025-09-29T02:04:33.299Z [my-label] info: Logged out from OrangeHRM
+2025-09-29T02:04:33.312Z [my-label] info: Checked for profile picture visibility
+2025-09-29T02:04:33.355Z [my-label] info: Checked for login form visibility
+2025-09-29T02:04:57.388Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login)
+2025-09-29T02:04:58.873Z [my-label] info: Login form is now visible
+2025-09-29T02:05:00.265Z [my-label] info: Username entered
+2025-09-29T02:05:02.272Z [my-label] info: Password entered
+2025-09-29T02:05:03.902Z [my-label] info: Login button clicked
+2025-09-29T02:05:03.903Z [my-label] info: Logged in to orangeHRM with username: Admin
+2025-09-29T02:05:04.538Z [my-label] info: Home page is loaded successfully
+2025-09-29T02:05:09.419Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+2025-09-29T02:05:10.069Z [my-label] info: Home page is loaded successfully
+2025-09-29T02:05:10.071Z [my-label] info: Home page is loaded successfully
+2025-09-29T02:05:10.074Z [my-label] info: Checked for profile picture visibility
+2025-09-29T02:14:45.567Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login)
+2025-09-29T02:14:46.734Z [my-label] info: Login form is now visible
+2025-09-29T02:14:48.113Z [my-label] info: Username entered
+2025-09-29T02:14:50.103Z [my-label] info: Password entered
+2025-09-29T02:14:51.563Z [my-label] info: Login button clicked
+2025-09-29T02:14:51.565Z [my-label] info: Logged in to orangeHRM with username: Admin
+2025-09-29T02:14:52.224Z [my-label] info: Home page is loaded successfully
+2025-09-29T02:14:52.233Z [my-label] info: Checked for profile picture visibility
+2025-09-29T02:14:53.800Z [my-label] info: User dropdown icon clicked
+2025-09-29T02:14:57.753Z [my-label] info: Logout link clicked
+2025-09-29T02:14:58.759Z [my-label] info: Logged out from OrangeHRM
+2025-09-29T02:14:58.771Z [my-label] info: Checked for profile picture visibility
+2025-09-29T02:14:58.809Z [my-label] info: Checked for login form visibility
+2025-09-29T02:15:10.508Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login)
+2025-09-29T02:15:12.144Z [my-label] info: Login form is now visible
+2025-09-29T02:15:13.610Z [my-label] info: Username entered
+2025-09-29T02:15:15.700Z [my-label] info: Password entered
+2025-09-29T02:15:17.243Z [my-label] info: Login button clicked
+2025-09-29T02:15:17.244Z [my-label] info: Logged in to orangeHRM with username: Admin
+2025-09-29T02:15:18.674Z [my-label] info: Home page is loaded successfully
+2025-09-29T02:15:18.681Z [my-label] info: Checked for profile picture visibility
+2025-09-29T02:15:20.464Z [my-label] info: User dropdown icon clicked
+2025-09-29T02:15:23.844Z [my-label] info: Logout link clicked
+2025-09-29T02:15:24.870Z [my-label] info: Logged out from OrangeHRM
+2025-09-29T02:15:24.874Z [my-label] info: Checked for profile picture visibility
+2025-09-29T02:15:24.953Z [my-label] info: Checked for login form visibility
+2025-09-29T02:15:34.246Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login)
+2025-09-29T02:15:35.752Z [my-label] info: Login form is now visible
+2025-09-29T02:15:37.170Z [my-label] info: Username entered
+2025-09-29T02:15:39.198Z [my-label] info: Password entered
+2025-09-29T02:15:40.851Z [my-label] info: Login button clicked
+2025-09-29T02:15:40.854Z [my-label] info: Logged in to orangeHRM with username: Admin
+2025-09-29T02:15:41.599Z [my-label] info: Home page is loaded successfully
+2025-09-29T02:15:41.604Z [my-label] info: Checked for profile picture visibility
+2025-09-29T02:15:44.215Z [my-label] info: User dropdown icon clicked
+2025-09-29T02:15:47.816Z [my-label] info: Logout link clicked
+2025-09-29T02:15:48.823Z [my-label] info: Logged out from OrangeHRM
+2025-09-29T02:15:48.830Z [my-label] info: Checked for profile picture visibility
+2025-09-29T02:15:48.869Z [my-label] info: Checked for login form visibility
