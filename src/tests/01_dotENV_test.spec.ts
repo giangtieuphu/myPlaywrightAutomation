@@ -1,23 +1,19 @@
-import {test, expect, Locator} from '@playwright/test';
-import { strict } from 'assert';
+import {test, expect, Locator} from '@playwright/test'
 
-test('Testing different dotenv data', async ({page}) => {
+test('Getting information from .env file', async ({page}) => {
+    const myTitle = "My Account"
+    const emailField: Locator = page.locator('#input-email')
+    const passwordField: Locator = page.locator('#input-password')
+    const loginButton: Locator = page.locator('input[value="Login"]')
 
-    await page.goto(process.env.BASE_URL as string);
+    await page.goto(process.env.OPENCART_BASE_URL as string)
+    await emailField.pressSequentially(process.env.OPENCART_EMAIL as string, {delay: 100})
+    await passwordField.pressSequentially(process.env.OPENCART_PASSWORD as string, {delay: 100})
+    await loginButton.click()
 
-    const myTitle = "My Account";
-    const emailField:Locator = page.locator('#input-email');
-    const passwordField:Locator = page.locator('#input-password');
-    const loginButton:Locator = page.locator('input[value="Login"]');
+    await expect(page).toHaveURL(process.env.OPENCART_HOME_URL as string)
+    await expect(page).toHaveTitle(myTitle)
 
-    await emailField.fill(process.env.MYEMAIL as string);
-    await passwordField.fill(process.env.MYPASSWORD as string);
-    await loginButton.click();
-
-    await expect(page).toHaveURL('https://naveenautomationlabs.com/opencart/index.php?route=account/account');
-
-    await expect(page).toHaveTitle(myTitle);
-
-    await page.screenshot({path: 'screenshots/naveenautomationlabs.png'});
+    await page.screenshot({path: 'screenshots/naveenautomationlabs.png'})
     await page.close()
-});
+})

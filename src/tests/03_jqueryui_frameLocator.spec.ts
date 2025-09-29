@@ -38,12 +38,12 @@ test('jQueryUI SelectMenu Test', async ({ page }) => {
 
     await titleMenu.click();
     await frame.locator('//div[.="Other"]').click();
-
-    //await page.locator('//iframe[@class="demo-frame"]').screenshot({path: 'screenshots/03_jqueryui_selectMeunuFrame.png'})
     
     // Number menu is expected to be selected as 19, actually selected: 18. 
-    // This picture compare is going to give a Failed result
-    await expect(page.locator('//iframe[@class="demo-frame"]')).toHaveScreenshot('screenshots/03_jqueryui_selectMeunuFrame.png')
+    // This picture compare is going to give a Failed result 
+
+    //await page.locator('//iframe[@class="demo-frame"]').screenshot({path: 'screenshots/03_jqueryui_selectMeunuFrame.png'})
+    await expect.soft(page.locator('//iframe[@class="demo-frame"]')).toHaveScreenshot('screenshots/03_jqueryui_selectMeunuFrame.png')
 
     await page.close()
 });

@@ -1,12 +1,12 @@
-import { test, expect, Locator } from '@playwright/test'
+import { test, expect } from '@playwright/test'
 import LoginPage from '../pages/loginPage'
 import HomePage from '../pages/homePage'
 
 test('orangeHRM Login Logout test', async ({ page }) => {
-  let loginPage = new LoginPage(page)
-  let homePage = new HomePage(page)
+  const loginPage = new LoginPage(page)
+  const homePage = new HomePage(page)
   await test.step('Go to OrangeHRM login page', async () => {
-    await loginPage.goToLoginPage(process.env.ORANGEHRM_BASE_URL as string)
+    await loginPage.goToLoginPage()
   })
   await test.step('Wait for the Login form', async () => {
     await loginPage.waitForLoginForm()
@@ -32,6 +32,5 @@ test('orangeHRM Login Logout test', async ({ page }) => {
   await test.step('Verify that the login form is displayed', async() => {
     expect(await loginPage.isLoginFormVisible()).toBeTruthy()
   })
-
   await page.close()
 })

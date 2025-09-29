@@ -1,0 +1,13 @@
+2025-09-28T13:31:28.383Z [my-label] error: Error clicking login button: Error: locator.click: Target page, context or browser has been closed
+2025-09-28T13:43:19.895Z [my-label] error: Error clicking user dropdown icon: Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('//i[contains(@class, "userdropdown-icon")]')[22m
+[2m    - locator resolved to <i data-v-bddebfba="" data-v-bdd6d943="" class="oxd-icon bi-caret-down-fill oxd-userdropdown-icon"></i>[22m
+
+2025-09-28T13:47:39.762Z [my-label] error: Error clicking user dropdown icon: Error: locator.click: Test timeout of 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('//i[contains(@class, "userdropdown-icon")]')[22m
+[2m    - locator resolved to <i data-v-bddebfba="" data-v-bdd6d943="" class="oxd-icon bi-caret-down-fill oxd-userdropdown-icon"></i>[22m
+[2m  - attempting click action[22m
+[2m    - waiting for element to be visible, enabled and stable[22m
+

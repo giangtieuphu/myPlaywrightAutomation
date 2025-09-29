@@ -1,0 +1,228 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic:
+    - complementary [ref=e4]:
+      - navigation "Sidepanel" [ref=e5]:
+        - generic [ref=e6]:
+          - link "client brand banner" [ref=e7]:
+            - /url: https://www.orangehrm.com/
+            - img "client brand banner" [ref=e9]
+          - text: 
+        - generic [ref=e10]:
+          - generic [ref=e11]:
+            - generic [ref=e12]:
+              - textbox "搜索" [ref=e15]
+              - button "" [ref=e16] [cursor=pointer]:
+                - generic [ref=e17] [cursor=pointer]: 
+            - separator [ref=e18]
+          - list [ref=e19]:
+            - listitem [ref=e20]:
+              - link "管理员" [ref=e21]:
+                - /url: /web/index.php/admin/viewAdminModule
+                - generic [ref=e24]: 管理员
+            - listitem [ref=e25]:
+              - link "个人信息管理系统" [ref=e26]:
+                - /url: /web/index.php/pim/viewPimModule
+                - generic [ref=e40]: 个人信息管理系统
+            - listitem [ref=e41]:
+              - link "休假" [ref=e42]:
+                - /url: /web/index.php/leave/viewLeaveModule
+                - generic [ref=e45]: 休假
+            - listitem [ref=e46]:
+              - link "时间" [ref=e47]:
+                - /url: /web/index.php/time/viewTimeModule
+                - generic [ref=e53]: 时间
+            - listitem [ref=e54]:
+              - link "招聘" [ref=e55]:
+                - /url: /web/index.php/recruitment/viewRecruitmentModule
+                - generic [ref=e61]: 招聘
+            - listitem [ref=e62]:
+              - link "我的信息" [ref=e63]:
+                - /url: /web/index.php/pim/viewMyDetails
+                - generic [ref=e69]: 我的信息
+            - listitem [ref=e70]:
+              - link "绩效" [ref=e71]:
+                - /url: /web/index.php/performance/viewPerformanceModule
+                - generic [ref=e79]: 绩效
+            - listitem [ref=e80]:
+              - link "仪表盘" [ref=e81]:
+                - /url: /web/index.php/dashboard/index
+                - generic [ref=e84]: 仪表盘
+            - listitem [ref=e85]:
+              - link "Directory" [ref=e86]:
+                - /url: /web/index.php/directory/viewDirectory
+                - generic [ref=e89]: Directory
+            - listitem [ref=e90]:
+              - link "Maintenance" [ref=e91]:
+                - /url: /web/index.php/maintenance/viewMaintenanceModule
+                - generic [ref=e95]: Maintenance
+            - listitem [ref=e96]:
+              - link "Claim" [ref=e97]:
+                - /url: /web/index.php/claim/viewClaimModule
+                - img [ref=e100]
+                - generic [ref=e104]: Claim
+            - listitem [ref=e105]:
+              - link "激动" [ref=e106]:
+                - /url: /web/index.php/buzz/viewBuzz
+                - generic [ref=e109]: 激动
+    - banner [ref=e110]:
+      - generic [ref=e111]:
+        - generic [ref=e112]:
+          - text: 
+          - heading "仪表盘" [level=6] [ref=e114]
+        - link "Upgrade" [ref=e116]:
+          - /url: https://orangehrm.com/open-source/upgrade-to-advanced
+          - button "Upgrade" [ref=e117] [cursor=pointer]: Upgrade
+        - list [ref=e123]:
+          - listitem [ref=e124]:
+            - generic [ref=e125] [cursor=pointer]:
+              - img "profile picture" [ref=e126] [cursor=pointer]
+              - paragraph [ref=e127] [cursor=pointer]: Sakthi A
+              - generic [ref=e128] [cursor=pointer]: 
+      - navigation "Topbar Menu" [ref=e130]:
+        - list [ref=e131]:
+          - button "" [ref=e133] [cursor=pointer]:
+            - generic [ref=e134] [cursor=pointer]: 
+  - generic [ref=e135]:
+    - generic [ref=e137]:
+      - generic [ref=e139]:
+        - generic [ref=e141]:
+          - generic [ref=e142]: 
+          - paragraph [ref=e143]: Time at Work
+        - separator [ref=e144]
+        - generic [ref=e146]:
+          - generic [ref=e147]:
+            - img "profile picture" [ref=e149]
+            - generic [ref=e150]:
+              - paragraph [ref=e151]: Punched Out
+              - paragraph [ref=e152]: "Punched Out: Mar 29th at 01:19 PM (GMT 7)"
+          - generic [ref=e153]:
+            - generic [ref=e154]:
+              - generic [ref=e155]: 0h
+              - generic [ref=e156]: 0m
+              - text: Today
+            - button "" [ref=e157] [cursor=pointer]:
+              - generic [ref=e158] [cursor=pointer]: 
+          - separator [ref=e159]
+          - generic [ref=e160]:
+            - generic [ref=e161]:
+              - paragraph [ref=e162]: This Week
+              - paragraph [ref=e163]: Sep 22 - Sep 28
+            - generic [ref=e164]:
+              - generic [ref=e165]: 
+              - paragraph [ref=e166]: 0h 0m
+      - generic [ref=e170]:
+        - generic [ref=e172]:
+          - generic [ref=e173]: 
+          - paragraph [ref=e174]: My Actions
+        - separator [ref=e175]
+        - generic [ref=e177]:
+          - generic [ref=e178]:
+            - button [ref=e179] [cursor=pointer]
+            - paragraph [ref=e185] [cursor=pointer]: (1) Pending Self Review
+          - generic [ref=e186]:
+            - button [ref=e187] [cursor=pointer]
+            - paragraph [ref=e196] [cursor=pointer]: (1) Candidate to Interview
+      - generic [ref=e198]:
+        - generic [ref=e200]:
+          - generic [ref=e201]: 
+          - paragraph [ref=e202]: Quick Launch
+        - separator [ref=e203]
+        - generic [ref=e205]:
+          - generic [ref=e206]:
+            - button "分配休假" [ref=e207] [cursor=pointer]
+            - paragraph [ref=e211]: 分配休假
+          - generic [ref=e212]:
+            - button "休假列表" [ref=e213] [cursor=pointer]
+            - paragraph [ref=e221]: 休假列表
+          - generic [ref=e222]:
+            - button "工时表" [ref=e223] [cursor=pointer]
+            - paragraph [ref=e230]: 工时表
+          - generic [ref=e231]:
+            - button "申请休假" [ref=e232] [cursor=pointer]
+            - paragraph [ref=e236]: 申请休假
+          - generic [ref=e237]:
+            - button "我的休假" [ref=e238] [cursor=pointer]
+            - paragraph [ref=e244]: 我的休假
+          - generic [ref=e245]:
+            - button "我的时间表" [ref=e246] [cursor=pointer]
+            - paragraph [ref=e250]: 我的时间表
+      - generic [ref=e252]:
+        - generic [ref=e254]:
+          - generic [ref=e255]: 
+          - paragraph [ref=e256]: Buzz Latest Posts
+        - separator [ref=e257]
+        - generic [ref=e259]:
+          - generic [ref=e260]:
+            - generic [ref=e261] [cursor=pointer]:
+              - img "profile picture" [ref=e263] [cursor=pointer]
+              - generic [ref=e264] [cursor=pointer]:
+                - paragraph [ref=e265] [cursor=pointer]: Sakthi Saravanan A
+                - paragraph [ref=e266] [cursor=pointer]: 2025-28-09 07:13 PM
+            - separator [ref=e267]
+            - paragraph [ref=e268]: Live SIMPLY Dream BIG Be GREATFULL Give LOVE Laugh LOT.......
+          - generic [ref=e269]:
+            - generic [ref=e270] [cursor=pointer]:
+              - img "profile picture" [ref=e272] [cursor=pointer]
+              - generic [ref=e273] [cursor=pointer]:
+                - paragraph [ref=e274] [cursor=pointer]: Sakthi Saravanan A
+                - paragraph [ref=e275] [cursor=pointer]: 2025-28-09 07:13 PM
+            - separator [ref=e276]
+            - paragraph [ref=e277]: Throwback Thursdays!!
+            - img
+          - generic [ref=e278]:
+            - generic [ref=e279] [cursor=pointer]:
+              - img "profile picture" [ref=e281] [cursor=pointer]
+              - generic [ref=e282] [cursor=pointer]:
+                - paragraph [ref=e283] [cursor=pointer]: Sakthi Saravanan A
+                - paragraph [ref=e284] [cursor=pointer]: 2020-08-10 10:38 AM
+            - separator [ref=e285]
+            - paragraph [ref=e286]: "Hi All; Linda has been blessed with a baby boy! Linda: With love, we welcome your dear new baby to this world. Congratulations!"
+          - generic [ref=e287]:
+            - generic [ref=e288] [cursor=pointer]:
+              - img "profile picture" [ref=e290] [cursor=pointer]
+              - generic [ref=e291] [cursor=pointer]:
+                - paragraph [ref=e292] [cursor=pointer]: Sania Shaheen
+                - paragraph [ref=e293] [cursor=pointer]: 2020-08-10 10:38 AM
+            - separator [ref=e294]
+            - paragraph [ref=e295]: "World Championship: What makes the perfect snooker player? Mark Selby: Robertson has one of the best techniques in the game. It is very, very straight and he fully commits to every single shot he plays. John Higgins: Every shot is repetitive. He always keeps the same technique and cues through the ball bang straight. Barry Hawkins: Robertson is textbook with his grip and has a ramrod solid cue action, delivering it in a straight line. Honourable mentions: Shaun Murphy, Ding Junhui, Jack Lisowski."
+          - generic [ref=e296]:
+            - generic [ref=e297] [cursor=pointer]:
+              - img "profile picture" [ref=e299] [cursor=pointer]
+              - generic [ref=e300] [cursor=pointer]:
+                - paragraph [ref=e301] [cursor=pointer]: Rebecca Harmony
+                - paragraph [ref=e302] [cursor=pointer]: 2020-08-10 10:34 AM
+            - separator [ref=e303]
+            - paragraph [ref=e304]: Throwback Thursdays!!
+            - img
+      - generic [ref=e306]:
+        - generic [ref=e307]:
+          - paragraph [ref=e312]: Employees on Leave Today
+          - generic [ref=e313] [cursor=pointer]: 
+        - separator [ref=e314]
+      - generic [ref=e318]:
+        - generic [ref=e320]:
+          - generic [ref=e321]: 
+          - paragraph [ref=e322]: Employee Distribution by Sub Unit
+        - separator [ref=e323]
+        - list [ref=e328]:
+          - listitem [ref=e329] [cursor=pointer]
+          - listitem [ref=e332] [cursor=pointer]
+          - listitem [ref=e335] [cursor=pointer]
+          - listitem [ref=e338] [cursor=pointer]
+          - listitem [ref=e341] [cursor=pointer]
+      - generic [ref=e345]:
+        - generic [ref=e347]:
+          - generic [ref=e348]: 
+          - paragraph [ref=e349]: Employee Distribution by Location
+        - separator [ref=e350]
+    - generic [ref=e353]:
+      - paragraph [ref=e354]: OrangeHRM OS 5.7
+      - paragraph [ref=e355]:
+        - text: © 2005 - 2025
+        - link "OrangeHRM, Inc" [ref=e356]:
+          - /url: http://www.orangehrm.com
+        - text: . All rights reserved.
+```
