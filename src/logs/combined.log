@@ -303,3 +303,39 @@ Call log:
 2025-09-29T02:34:47.845Z [my-label] info: Home page is loaded successfully
 2025-09-29T02:34:47.848Z [my-label] info: Home page is loaded successfully
 2025-09-29T02:34:47.853Z [my-label] info: Checked for profile picture visibility
+2025-09-29T04:07:38.284Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+2025-09-29T04:08:16.912Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+2025-09-29T04:08:46.228Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+2025-09-29T04:09:43.916Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login)
+2025-09-29T04:09:44.841Z [my-label] info: Login form is now visible
+2025-09-29T04:09:46.225Z [my-label] info: Username entered
+2025-09-29T04:09:48.216Z [my-label] info: Password entered
+2025-09-29T04:09:49.594Z [my-label] info: Login button clicked
+2025-09-29T04:09:49.595Z [my-label] info: Logged in to orangeHRM with username: Admin
+2025-09-29T04:09:50.137Z [my-label] info: Home page is loaded successfully
+2025-09-29T04:09:54.999Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+2025-09-29T04:09:55.621Z [my-label] info: Home page is loaded successfully
+2025-09-29T04:09:55.631Z [my-label] info: Home page is loaded successfully
+2025-09-29T04:09:55.642Z [my-label] info: Checked for profile picture visibility
+2025-09-29T04:10:06.971Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login)
+2025-09-29T04:10:08.006Z [my-label] info: Login form is now visible
+2025-09-29T04:10:09.567Z [my-label] info: Username entered
+2025-09-29T04:10:11.645Z [my-label] info: Password entered
+2025-09-29T04:10:13.169Z [my-label] info: Login button clicked
+2025-09-29T04:10:13.170Z [my-label] info: Logged in to orangeHRM with username: Admin
+2025-09-29T04:10:14.741Z [my-label] info: Home page is loaded successfully
+2025-09-29T04:10:20.369Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+2025-09-29T04:10:21.187Z [my-label] info: Home page is loaded successfully
+2025-09-29T04:10:21.240Z [my-label] info: Home page is loaded successfully
+2025-09-29T04:10:21.252Z [my-label] info: Checked for profile picture visibility
+2025-09-29T04:10:28.321Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login)
+2025-09-29T04:10:31.612Z [my-label] info: Login form is now visible
+2025-09-29T04:10:33.106Z [my-label] info: Username entered
+2025-09-29T04:10:35.118Z [my-label] info: Password entered
+2025-09-29T04:10:35.691Z [my-label] info: Login button clicked
+2025-09-29T04:10:35.691Z [my-label] info: Logged in to orangeHRM with username: Admin
+2025-09-29T04:10:37.477Z [my-label] info: Home page is loaded successfully
+2025-09-29T04:10:42.840Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+2025-09-29T04:10:43.516Z [my-label] info: Home page is loaded successfully
+2025-09-29T04:10:43.532Z [my-label] info: Home page is loaded successfully
+2025-09-29T04:10:43.553Z [my-label] info: Checked for profile picture visibility
