@@ -1,0 +1,25 @@
+[
+    {
+    "id": 1,
+    "username": "automation@engineer.com",
+    "password": "PwdPwd!@#123"
+    },
+
+    {
+    "id": 2,
+    "username": "automation1@engineer.com",
+    "password": "PwdPwd!@#123"
+    },
+
+    {
+    "id": 3,
+    "username": "automation2@engineer.com",
+    "password": "PwdPwd!@#123"
+    },
+
+    {
+    "id": 4,
+    "username": "automation3@engineer.com",
+    "password": "PwdPwd!@#123"
+    }
+]
