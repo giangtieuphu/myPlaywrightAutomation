@@ -2,7 +2,8 @@ import {expect, test} from '@playwright/test'
 
 test('Testing radio & check boxes', async ({page}) => {
     
-    await page.goto('https://jqueryui.com/checkboxradio/')  
+    await page.goto('https://jqueryui.com/checkboxradio/')
+    await page.waitForFunction("document.readyState === 'complete'")
     
     // All the ways work
     // const myFrame = page.frameLocator('iframe[src="/resources/demos/droppable/default.html"]')

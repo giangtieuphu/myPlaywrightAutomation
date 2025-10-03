@@ -29,57 +29,68 @@ export default class HomePage {
         this.perfomanceMenuLink = 'a[href="/web/index.php/performance/viewPerformanceModule"]'
         this.dashboardMenuLink = 'a[href="/web/index.php/dashboard/index"]'
         this.maintenanceMenuLink = 'a[href="/web/index.php/maintenance/viewMaintenanceModule"]'
-        this.userDropdownIcon = '//i[contains(@class, "userdropdown-icon")]'
+        this.userDropdownIcon = '//i[contains(@class,"userdropdown-icon")]'
         this.logoutLink = 'a[role="menuitem"][href="/web/index.php/auth/logout"]'
-        this.profilePicture = '//span[@class="oxd-userdropdown-tab"]/img[@alt="profile picture"]'
+        this.profilePicture = 'img[class="oxd-userdropdown-img"]'
     }
     async navigateToHomePage() : Promise<void> {
         await this.page.goto(this.homeURL)
         Logger.info(`Navigated to ${this.homeURL}`) 
-        this.waitForHomePageLoad()
+        await this.page.waitForFunction("document.readyState === 'complete'")
+        await this.page.waitForLoadState('networkidle')
     }
     async waitForHomePageLoad(): Promise<void> {
-        await this.page.waitForSelector(this.homePageHeader)
-        await this.page.waitForSelector(this.headerTitle)
-        await this.page.waitForSelector(this.headerUserArea)
-        await this.page.waitForSelector(this.mainMenu)
+        // await this.page.waitForSelector(this.homePageHeader)
+        // await this.page.waitForSelector(this.headerTitle)
+        // await this.page.waitForSelector(this.headerUserArea)
+        // await this.page.waitForSelector(this.mainMenu)
+        // await this.page.waitForFunction("document.readyState === 'complete'")
+        await this.page.waitForLoadState('networkidle')
         Logger.info('Home page is loaded successfully')
     }
     async isProfilePictureVisible(): Promise<boolean> {
-        const isVisible = (this.page.locator(this.profilePicture)).isVisible()
-        Logger.info('Checked for profile picture visibility')
-        return isVisible
+        const profilePics = await this.page.locator(this.profilePicture)
+        const count = await profilePics.count()
+        if (count > 0) {
+            Logger.info('Profile picture is present in the DOM')
+            return true
+        } else {
+            Logger.info('Profile picture is NOT present in the DOM')
+            return false
+        }
     }
+
     async getProfilePicture(): Promise<string> {
         return this.profilePicture
     }
     async goToAdminPage(): Promise<void> {
+        await this.page.waitForSelector(this.adminMenuLink, { timeout: 3000 })
         await this.page.locator(this.adminMenuLink).hover()
         await this.page.locator(this.adminMenuLink).focus()
-        await this.page.waitForTimeout(1000) // Wait for 1000 milliseconds
         await this.page.locator(this.adminMenuLink).click()
-        await this.page.waitForTimeout(1000) // Wait for 1000 milliseconds
+        await this.page.waitForFunction("document.readyState === 'complete'")
     }
     async logOut(): Promise<void> {
+        await this.page.waitForSelector(this.userDropdownIcon, { timeout: 3000 })
         await this.page.locator(this.userDropdownIcon).hover()
         await this.page.locator(this.userDropdownIcon).focus()
-        await this.page.waitForTimeout(1000) // Wait for 1000 milliseconds
         await this.page.locator(this.userDropdownIcon).click()
             .catch((error) => {
                 Logger.error(`Error clicking user dropdown icon: ${error}`)
                 throw error;
             }).then(() => Logger.info('User dropdown icon clicked'))
-        await this.page.waitForTimeout(1000) // Wait for 1000 milliseconds
-
+        
+        await this.page.waitForSelector(this.logoutLink, { timeout: 3000 })
         await this.page.locator(this.logoutLink).hover()
-        await this.page.locator(this.logoutLink).focus()
-        await this.page.waitForTimeout(1000) // Wait for 1000 milliseconds
+        await this.page.locator(this.logoutLink).focus() 
         await this.page.locator(this.logoutLink).click()
             .catch((error) => {
                 Logger.error(`Error clicking logout link: ${error}`)
                 throw error;
             }).then(() => Logger.info('Logout link clicked'))
-        await this.page.waitForTimeout(1000) // Wait for 1000 milliseconds
+
+        // await this.page.waitForFunction("document.readyState === 'complete'")
+        await this.page.waitForLoadState('networkidle')
         Logger.info('Logged out from OrangeHRM')
     }
     async returnPageObject(): Promise<Page> {

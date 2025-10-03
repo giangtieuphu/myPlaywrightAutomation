@@ -5,7 +5,7 @@ test('Register a new user - Just run one time!', async ({page}) => {
     const registerLink = page.getByRole('link', { name: 'Register' })
 
     await registerLink.click()
-    await page.waitForSelector('form[id="customerForm"]')
+    await page.waitForFunction("document.readyState === 'complete'")
     await page.locator('[id="customer.firstName"]').fill('Automation')
     await page.locator('[id="customer.lastName"]').fill('Tester')
     await page.locator('[id="customer.address.street"]').fill('123 Testing St')
@@ -18,11 +18,13 @@ test('Register a new user - Just run one time!', async ({page}) => {
     await page.locator('[id="customer.password"]').fill('Pwd!@#123')
     await page.locator('[id="repeatedPassword"]').fill('Pwd!@#123')
     await page.getByRole('button', { name: 'Register' }).click()
+    await page.waitForFunction("document.readyState === 'complete'")
     
 })
 
 test('Playwright select with Parabank app', async ({page}) => {
     await page.goto('https://parabank.parasoft.com/')
+    await page.waitForLoadState('networkidle');
 
     const username = page.locator('input[name="username"]')
     const password = page.locator('input[name="password"]')
@@ -37,23 +39,23 @@ test('Playwright select with Parabank app', async ({page}) => {
     const transactionType = 'select[id="transactionType"]'
     const transactionTypeOptions = '//select[@id="transactionType"]/option'
 
-    await page.waitForSelector('form[name="login"]')
     await username.fill('automationtester')
     await password.fill('Pwd!@#123')
     await loginButton.click()
+    await page.waitForFunction("document.readyState === 'complete'")
 
-    await page.waitForSelector(accountOverviewLink)
     await page.locator(accountOverviewLink).click()
 
-    await page.waitForSelector(accountTable)
+    await page.waitForFunction("document.readyState === 'complete'")
     await page.locator(accountDetailsLink).click()
 
-    await page.waitForSelector(activityTable)
+    await page.waitForFunction("document.readyState === 'complete'")
     await page.locator(activityPeriod).selectOption('December')
     await page.locator(transactionType).selectOption('Debit')
 
     await expect(page.locator(activityPeriodOptions)).toHaveText(['All', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'])
     await expect(page.locator(transactionTypeOptions)).toHaveText(['All', 'Credit', 'Debit'])
 
+    await page.close()
 })
 

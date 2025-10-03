@@ -6,7 +6,8 @@ test('Read Test Data from JSON file', async ({page})=>{
     await page.getByRole('textbox', { name: 'Enter Email' }).fill(users[0].username)
     await page.getByRole('textbox', { name: 'Enter Password' }).fill(users[0].password)
     await page.getByRole('button', { name: 'Sign in' }).click()
-    
+    await page.waitForFunction("document.readyState === 'complete'")
+
     expect(page).toHaveURL('https://freelance-learn-automation.vercel.app/')
     await page.close()
 }) 
@@ -20,13 +21,13 @@ test.describe('Data Driven Login Logout Tests', () => {
             await page.getByRole('textbox', { name: 'Enter Password' }).fill(user.password)
             await page.getByRole('button', { name: 'Sign in' }).click()
             
-            await page.waitForTimeout(1000)
+            await page.waitForLoadState('networkidle');
             expect(page).toHaveURL('https://freelance-learn-automation.vercel.app/')
 
             await page.getByRole('img', { name: 'menu' }).click()
-            await page.getByRole('button', { name: 'Sign out' }).click() 
+            await page.getByRole('button', { name: 'Sign out' }).click()
+            await page.waitForLoadState('networkidle');
             
-            await page.waitForTimeout(1000)
             expect(page.locator('form[class="login-form"]')).toBeVisible()
             })
         })

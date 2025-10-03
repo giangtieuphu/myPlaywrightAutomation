@@ -7,10 +7,8 @@ const authFile = 'src/config/auth.json'
 test('Saving OrangeHRM login session', async ({page}) => {
     const loginPage = new LoginPage(page)  
     await loginPage.goToLoginPage()
-    await loginPage.waitForLoginForm()
     await loginPage.login('Admin', 'admin123')
     const homePage = new HomePage(page) 
-    await homePage.waitForHomePageLoad()
     await page.context().storageState({path: authFile})
     await page.close()               
 })
@@ -20,11 +18,8 @@ test('Opening orangeHRM with authentication file', async ({browser}) => {
     const page = await context.newPage()
     const homePage = new HomePage(page)
     await homePage.navigateToHomePage()
-    await homePage.waitForHomePageLoad()
     expect(await homePage.isProfilePictureVisible()).toBeTruthy()
-    await page.close()
-    // await context.close()
-    // await browser.close()   
+    await page.close() 
 })
 
 

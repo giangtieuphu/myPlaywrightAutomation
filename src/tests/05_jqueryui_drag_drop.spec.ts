@@ -1,7 +1,8 @@
 import {test} from '@playwright/test'
 
 test('Drag drop action +++ 03 levels of screenshot', async ({page}) => {
-    await page.goto('https://jqueryui.com/droppable/')  
+    await page.goto('https://jqueryui.com/droppable/')
+    await page.waitForFunction("document.readyState === 'complete'")
     
     // All the ways work
     const myFrame = page.frameLocator('iframe[src="/resources/demos/droppable/default.html"]')

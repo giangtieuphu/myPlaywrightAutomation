@@ -7,6 +7,8 @@ test('jQueryUI SelectMenu Test', async ({ page }) => {
     // const frame = page.frameLocator('//iframe[@class="demo-frame"]')
     // const frame = page.frameLocator('[class="demo-frame"]')
     const frame = page.frameLocator('iframe.demo-frame')
+    const frameSeletor = '//iframe[@class="demo-frame"]'
+    const screenshotPath = 'screenshots/03_jqueryui_selectMeunuFrame.png'
 
     // const speedMenu = frame.locator('#speed-button')
     // const fileMenu = frame.locator('#files-button')
@@ -41,8 +43,8 @@ test('jQueryUI SelectMenu Test', async ({ page }) => {
     // Number menu is expected to be selected as 19, actually selected: 19.
     // This picture compare is going to give a Failed result 
 
-    await page.locator('//iframe[@class="demo-frame"]').screenshot({path: 'screenshots/03_jqueryui_selectMeunuFrame.png'})
-    await expect.soft(page.locator('//iframe[@class="demo-frame"]')).toHaveScreenshot('screenshots/03_jqueryui_selectMeunuFrame.png')
+    await page.locator(frameSeletor).screenshot({ path: screenshotPath })
+    await expect(page.locator(frameSeletor)).toHaveScreenshot(screenshotPath)
 
     await page.close()
 })

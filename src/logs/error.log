@@ -11,3 +11,5 @@ Call log:
 [2m  - attempting click action[22m
 [2m    - waiting for element to be visible, enabled and stable[22m
 
+2025-10-03T06:51:12.078Z [my-label] error: Error clicking login button: Error: locator.click: Target page, context or browser has been closed
+2025-10-03T07:11:11.623Z [my-label] error: Error clicking logout link: Error: locator.click: Target page, context or browser has been closed
