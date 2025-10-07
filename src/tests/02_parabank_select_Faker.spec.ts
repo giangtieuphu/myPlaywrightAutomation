@@ -46,9 +46,7 @@ test('Playwright select with Parabank app', async ({page}) => {
     const loginButton = page.locator('input[value="Log In"]')
 
     const accountOverviewLink = 'a[href="overview.htm"]'
-    const accountTable = 'table[id="accountTable"]'
     const accountDetailsLink = '//table[@id="accountTable"]//a'
-    const activityTable = 'table[class="form_activity"]'
     const activityPeriod = 'select[id="month"]'
     const activityPeriodOptions = '//select[@id="month"]/option'
     const transactionType = 'select[id="transactionType"]'

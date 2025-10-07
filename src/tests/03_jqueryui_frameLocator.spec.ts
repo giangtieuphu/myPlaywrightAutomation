@@ -48,4 +48,3 @@ test('jQueryUI SelectMenu Test', async ({ page }) => {
 
     await page.close()
 })
-
