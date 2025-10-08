@@ -2,24 +2,25 @@
     {
     "id": 1,
     "username": "automation@engineer.com",
-    "password": "PwdPwd!@#123"
+    "password": "PwdPwd!@#123",
+    "fullname": "Automation Engineer"
     },
-
     {
     "id": 2,
     "username": "automation1@engineer.com",
-    "password": "PwdPwd!@#123"
+    "password": "PwdPwd!@#123",
+    "fullname": "Automation Engineer 1"
     },
-
     {
     "id": 3,
     "username": "automation2@engineer.com",
-    "password": "PwdPwd!@#123"
+    "password": "PwdPwd!@#123",
+    "fullname": "Automation Engineer 2" 
     },
-
     {
     "id": 4,
     "username": "automation3@engineer.com",
-    "password": "PwdPwd!@#123"
+    "password": "PwdPwd!@#123",
+    "fullname": "Automation Engineer 3"
     }
 ]

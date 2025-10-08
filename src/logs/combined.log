@@ -884,3 +884,27 @@ Call log:
 2025-10-03T09:13:16.950Z [my-label] info: Logged in to orangeHRM with username: Admin
 2025-10-03T09:13:21.884Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
 2025-10-03T09:13:24.346Z [my-label] info: Profile picture is present in the DOM
+2025-10-08T09:06:38.564Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login)
+2025-10-08T09:06:39.463Z [my-label] info: Username entered
+2025-10-08T09:06:40.638Z [my-label] info: Password entered
+2025-10-08T09:06:42.074Z [my-label] info: Login button clicked
+2025-10-08T09:06:42.108Z [my-label] info: Logged in to orangeHRM with username: Admin
+2025-10-08T09:06:46.415Z [my-label] info: Home page is loaded successfully
+2025-10-08T09:06:46.460Z [my-label] info: Profile picture is present in the DOM
+2025-10-08T09:06:47.064Z [my-label] info: User dropdown icon clicked
+2025-10-08T09:06:48.564Z [my-label] info: Logout link clicked
+2025-10-08T09:06:49.471Z [my-label] info: Logged out from OrangeHRM
+2025-10-08T09:06:49.507Z [my-label] info: Profile picture is NOT present in the DOM
+2025-10-08T09:06:49.523Z [my-label] info: Checked for login form visibility
+2025-10-08T09:07:04.793Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login)
+2025-10-08T09:07:05.752Z [my-label] info: Username entered
+2025-10-08T09:07:06.971Z [my-label] info: Password entered
+2025-10-08T09:07:07.266Z [my-label] info: Login button clicked
+2025-10-08T09:07:08.386Z [my-label] info: Logged in to orangeHRM with username: Admin
+2025-10-08T09:07:12.351Z [my-label] info: Home page is loaded successfully
+2025-10-08T09:07:12.407Z [my-label] info: Profile picture is present in the DOM
+2025-10-08T09:07:12.954Z [my-label] info: User dropdown icon clicked
+2025-10-08T09:07:14.826Z [my-label] info: Logout link clicked
+2025-10-08T09:07:15.699Z [my-label] info: Logged out from OrangeHRM
+2025-10-08T09:07:15.741Z [my-label] info: Profile picture is NOT present in the DOM
+2025-10-08T09:07:15.759Z [my-label] info: Checked for login form visibility

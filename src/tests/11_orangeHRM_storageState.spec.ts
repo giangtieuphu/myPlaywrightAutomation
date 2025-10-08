@@ -21,5 +21,3 @@ test('Opening orangeHRM with authentication file', async ({browser}) => {
     expect(await homePage.isProfilePictureVisible()).toBeTruthy()
     await page.close() 
 })
-
-
