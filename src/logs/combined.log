@@ -908,3 +908,60 @@ Call log:
 2025-10-08T09:07:15.699Z [my-label] info: Logged out from OrangeHRM
 2025-10-08T09:07:15.741Z [my-label] info: Profile picture is NOT present in the DOM
 2025-10-08T09:07:15.759Z [my-label] info: Checked for login form visibility
+2025-10-08T11:02:22.359Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login)
+2025-10-08T11:02:23.331Z [my-label] info: Username entered
+2025-10-08T11:02:24.563Z [my-label] info: Password entered
+2025-10-08T11:02:25.928Z [my-label] info: Login button clicked
+2025-10-08T11:02:25.954Z [my-label] info: Logged in to orangeHRM with username: Admin
+2025-10-08T11:02:28.438Z [my-label] info: Home page is loaded successfully
+2025-10-08T11:02:28.507Z [my-label] info: Profile picture is present in the DOM
+2025-10-08T11:02:29.064Z [my-label] info: User dropdown icon clicked
+2025-10-08T11:02:30.550Z [my-label] info: Logout link clicked
+2025-10-08T11:02:31.419Z [my-label] info: Logged out from OrangeHRM
+2025-10-08T11:02:31.462Z [my-label] info: Profile picture is NOT present in the DOM
+2025-10-08T11:02:31.472Z [my-label] info: Checked for login form visibility
+2025-10-08T11:02:51.971Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login)
+2025-10-08T11:02:52.836Z [my-label] info: Username entered
+2025-10-08T11:02:54.054Z [my-label] info: Password entered
+2025-10-08T11:02:54.364Z [my-label] info: Login button clicked
+2025-10-08T11:02:55.453Z [my-label] info: Logged in to orangeHRM with username: Admin
+2025-10-08T11:02:59.426Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+2025-10-08T11:03:02.210Z [my-label] info: Profile picture is present in the DOM
+2025-10-08T11:04:15.789Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login)
+2025-10-08T11:04:16.819Z [my-label] info: Username entered
+2025-10-08T11:04:18.069Z [my-label] info: Password entered
+2025-10-08T11:04:19.586Z [my-label] info: Login button clicked
+2025-10-08T11:04:19.908Z [my-label] info: Logged in to orangeHRM with username: Admin
+2025-10-08T11:04:22.596Z [my-label] info: Home page is loaded successfully
+2025-10-08T11:04:22.708Z [my-label] info: Profile picture is present in the DOM
+2025-10-08T11:04:23.273Z [my-label] info: User dropdown icon clicked
+2025-10-08T11:04:24.818Z [my-label] info: Logout link clicked
+2025-10-08T11:04:25.958Z [my-label] info: Logged out from OrangeHRM
+2025-10-08T11:04:26.056Z [my-label] info: Profile picture is NOT present in the DOM
+2025-10-08T11:04:26.061Z [my-label] info: Checked for login form visibility
+2025-10-08T11:04:48.749Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login)
+2025-10-08T11:04:49.682Z [my-label] info: Username entered
+2025-10-08T11:04:51.065Z [my-label] info: Password entered
+2025-10-08T11:04:52.528Z [my-label] info: Login button clicked
+2025-10-08T11:04:52.844Z [my-label] info: Logged in to orangeHRM with username: Admin
+2025-10-08T11:04:57.841Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+2025-10-08T11:05:00.749Z [my-label] info: Profile picture is present in the DOM
+2025-10-08T11:06:22.145Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login)
+2025-10-08T11:06:23.359Z [my-label] info: Username entered
+2025-10-08T11:06:24.563Z [my-label] info: Password entered
+2025-10-08T11:06:26.186Z [my-label] info: Login button clicked
+2025-10-08T11:06:26.228Z [my-label] info: Logged in to orangeHRM with username: Admin
+2025-10-08T11:06:28.858Z [my-label] info: Home page is loaded successfully
+2025-10-08T11:06:28.926Z [my-label] info: Profile picture is present in the DOM
+2025-10-08T11:06:29.824Z [my-label] info: User dropdown icon clicked
+2025-10-08T11:06:31.678Z [my-label] info: Logout link clicked
+2025-10-08T11:06:32.575Z [my-label] info: Logged out from OrangeHRM
+2025-10-08T11:06:32.640Z [my-label] info: Profile picture is NOT present in the DOM
+2025-10-08T11:06:32.647Z [my-label] info: Checked for login form visibility
+2025-10-08T11:07:02.945Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/auth/login)
+2025-10-08T11:07:03.888Z [my-label] info: Username entered
+2025-10-08T11:07:05.092Z [my-label] info: Password entered
+2025-10-08T11:07:16.824Z [my-label] info: Login button clicked
+2025-10-08T11:07:16.869Z [my-label] info: Logged in to orangeHRM with username: Admin
+2025-10-08T11:07:21.550Z [my-label] info: Navigated to https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index
+2025-10-08T11:07:24.203Z [my-label] info: Profile picture is present in the DOM
