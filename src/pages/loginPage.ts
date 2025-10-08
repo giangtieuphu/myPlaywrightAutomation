@@ -20,7 +20,7 @@ export default class LoginPage {
     async goToLoginPage(): Promise<void> {
         await this.page.goto(process.env.ORANGEHRM_BASE_URL as string)
 
-        // await this.page.waitForFunction("document.readyState === 'complete'")
+        await this.page.waitForFunction("document.readyState === 'complete'")
         await this.page.waitForLoadState('networkidle')
 
         Logger.info(`Navigated to ${process.env.ORANGEHRM_BASE_URL as string})`)
@@ -61,6 +61,7 @@ export default class LoginPage {
         await this.fillPassword(password) 
         await this.clickLoginButton()
         await this.page.waitForFunction("document.readyState === 'complete'")
+        await this.page.waitForLoadState('networkidle')
         Logger.info(`Logged in to orangeHRM with username: ${username}`)
     }
     async returnPageObject(): Promise<Page> {

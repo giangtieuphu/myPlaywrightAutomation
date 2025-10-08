@@ -14,11 +14,11 @@ test('orangeHRM Login Logout test', async ({ page }) => {
   await test.step('Wait for Home page to load', async() => {
     await homePage.waitForHomePageLoad()
   })
-  await test.step('Verify that the profile picture is displayed ', async() => {
-    expect.soft(await homePage.isProfilePictureVisible()).toBeTruthy()
-  })
   await test.step('Verify the URL after login', async() => {
     await expect.soft(page).toHaveURL(process.env.ORANGEHRM_HOME_URL as string)
+  })
+  await test.step('Verify that the profile picture is displayed ', async() => {
+    expect.soft(await homePage.isProfilePictureVisible()).toBeTruthy()
   })
   await test.step('Logout from OrangeHRM', async() => {
     await homePage.logOut()

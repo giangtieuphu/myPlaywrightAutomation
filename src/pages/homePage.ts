@@ -40,11 +40,16 @@ export default class HomePage {
         await this.page.waitForLoadState('networkidle')
     }
     async waitForHomePageLoad(): Promise<void> {
-        // await this.page.waitForSelector(this.homePageHeader)
-        // await this.page.waitForSelector(this.headerTitle)
-        // await this.page.waitForSelector(this.headerUserArea)
-        // await this.page.waitForSelector(this.mainMenu)
-        // await this.page.waitForFunction("document.readyState === 'complete'")
+        await this.page.waitForSelector(this.homePageHeader)
+        await this.page.waitForSelector(this.headerTitle)
+        await this.page.waitForSelector(this.headerUserArea)
+        await this.page.waitForSelector(this.mainMenu)
+        await this.page.waitForSelector(this.adminMenuLink)
+        await this.page.waitForSelector(this.leaveMenuLink)
+        await this.page.waitForSelector(this.perfomanceMenuLink)
+        await this.page.waitForSelector(this.dashboardMenuLink)
+        await this.page.waitForSelector(this.maintenanceMenuLink)
+        await this.page.waitForFunction("document.readyState === 'complete'")
         await this.page.waitForLoadState('networkidle')
         Logger.info('Home page is loaded successfully')
     }
@@ -89,7 +94,7 @@ export default class HomePage {
                 throw error;
             }).then(() => Logger.info('Logout link clicked'))
 
-        // await this.page.waitForFunction("document.readyState === 'complete'")
+        await this.page.waitForFunction("document.readyState === 'complete'")
         await this.page.waitForLoadState('networkidle')
         Logger.info('Logged out from OrangeHRM')
     }

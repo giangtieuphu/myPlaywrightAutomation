@@ -5,6 +5,7 @@ test.describe('Data Driven Sign-Up Test', () => {
     for (const user of users) {
         test(`Sign-up for user: ${user.username}`, async ({ page }) => {
             await page.goto('https://freelance-learn-automation.vercel.app/signup')
+            await page.waitForFunction(() => document.readyState === 'complete')
             await page.waitForLoadState("networkidle")
             await page.getByRole('textbox', { name: 'Name' }).fill(user.fullname)
             await page.getByRole('textbox', { name: 'Email' }).fill(user.username)
@@ -17,6 +18,7 @@ test.describe('Data Driven Sign-Up Test', () => {
             await page.locator('#state').selectOption('Andaman and Nicobar Islands')
             await page.locator('#hobbies').selectOption("Dancing")
             await page.getByRole('button', { name: 'Sign up' }).click()
+            await page.waitForFunction(() => document.readyState === 'complete')
             await page.waitForLoadState("networkidle")       
 
             expect.soft(page.locator('//h2[text()="Email already registered!"]')).toBeVisible()
@@ -30,17 +32,20 @@ test.describe('Data Driven Login-Logout Test', () => {
     for (const user of users) {
         test(`Login-Logout as: ${user.username}`, async ({ page }) => {
             await page.goto('https://freelance-learn-automation.vercel.app/login')
+            await page.waitForFunction(() => document.readyState === 'complete')
             await page.waitForLoadState("networkidle")
 
             await page.getByRole('textbox', { name: 'Enter Email' }).fill(user.username)
             await page.getByRole('textbox', { name: 'Enter Password' }).fill(user.password)
             await page.getByRole('button', { name: 'Sign in' }).click()
+            await page.waitForFunction(() => document.readyState === 'complete')
             await page.waitForLoadState('networkidle');
-            
-            expect.soft(page).toHaveURL('https://freelance-learn-automation.vercel.app')
+
+            expect.soft(page).toHaveURL('https://freelance-learn-automation.vercel.app');
 
             await page.getByRole('img', { name: 'menu' }).click()
             await page.getByRole('button', { name: 'Sign out' }).click()
+            await page.waitForFunction(() => document.readyState === 'complete')
             await page.waitForLoadState('networkidle')
 
             expect.soft(page.locator('form[class="login-form"]')).toBeVisible()
