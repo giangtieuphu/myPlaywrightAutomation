@@ -19,8 +19,7 @@ test.describe('Data Driven Sign-Up Test', () => {
             await page.getByRole('button', { name: 'Sign up' }).click()
             await page.waitForLoadState("networkidle")       
 
-            expect(page.getByRole('heading', { name: 'Email already registered!' })).toBeVisible()
-            
+            expect.soft(page.locator('//h2[text()="Email already registered!"]')).toBeVisible()
             await page.waitForTimeout(1000)
             await page.close()
         })
@@ -42,10 +41,10 @@ test.describe('Data Driven Login-Logout Test', () => {
 
             await page.getByRole('img', { name: 'menu' }).click()
             await page.getByRole('button', { name: 'Sign out' }).click()
-            await page.waitForLoadState('networkidle');
-            
+            await page.waitForLoadState('networkidle')
+
             expect.soft(page.locator('form[class="login-form"]')).toBeVisible()
-            
+
             await page.waitForTimeout(1000)
             await page.close()
         })
