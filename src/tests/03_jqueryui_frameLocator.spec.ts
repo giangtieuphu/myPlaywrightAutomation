@@ -21,10 +21,10 @@ test('jQueryUI SelectMenu Test', async ({ page }) => {
     const titleMenu = frameLocator.contentFrame().locator('#salutation-button')
 
     await test.step('Verify the presence of all the select menus', async () => {
-        await expect(speedMenu).toBeVisible()
-        await expect(fileMenu).toBeVisible()
-        await expect(numberMenu).toBeVisible()
-        await expect(titleMenu).toBeVisible()
+        await expect.soft(speedMenu).toBeVisible()
+        await expect.soft(fileMenu).toBeVisible()
+        await expect.soft(numberMenu).toBeVisible()
+        await expect.soft(titleMenu).toBeVisible()
     })
 
     await speedMenu.click()
@@ -44,7 +44,7 @@ test('jQueryUI SelectMenu Test', async ({ page }) => {
     // This picture compare is going to give a Failed result 
 
     await page.locator(frameSeletor).screenshot({ path: screenshotPath })
-    await expect(page.locator(frameSeletor)).toHaveScreenshot(screenshotPath)
+    await expect.soft(page.locator(frameSeletor)).toHaveScreenshot(screenshotPath)
 
     await page.close()
 })

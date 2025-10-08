@@ -38,13 +38,13 @@ test.describe('Data Driven Login-Logout Test', () => {
             await page.getByRole('button', { name: 'Sign in' }).click()
             await page.waitForLoadState('networkidle');
             
-            expect(page).toHaveURL('https://freelance-learn-automation.vercel.app')
+            expect.soft(page).toHaveURL('https://freelance-learn-automation.vercel.app')
 
             await page.getByRole('img', { name: 'menu' }).click()
             await page.getByRole('button', { name: 'Sign out' }).click()
             await page.waitForLoadState('networkidle');
             
-            expect(page.locator('form[class="login-form"]')).toBeVisible()
+            expect.soft(page.locator('form[class="login-form"]')).toBeVisible()
             
             await page.waitForTimeout(1000)
             await page.close()

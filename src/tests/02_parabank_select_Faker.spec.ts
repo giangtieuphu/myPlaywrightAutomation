@@ -71,8 +71,8 @@ test('Playwright select with Parabank app', async ({page}) => {
     const months = ['All','January','February','March','April',
                     'May','June','July','August','September',
                     'October','November','December']
-    await expect(page.locator(activityPeriodOptions)).toHaveText(months)
-    await expect(page.locator(transactionTypeOptions)).toHaveText(['All', 'Credit', 'Debit'])
+    await expect.soft(page.locator(activityPeriodOptions)).toHaveText(months)
+    await expect.soft(page.locator(transactionTypeOptions)).toHaveText(['All', 'Credit', 'Debit'])
 
     await page.close()
 })

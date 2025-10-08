@@ -11,8 +11,8 @@ test('Getting information from .env file', async ({page}) => {
     await passwordField.pressSequentially(process.env.OPENCART_PASSWORD as string, {delay: 100})
     await loginButton.click()
 
-    await expect(page).toHaveURL(process.env.OPENCART_HOME_URL as string)
-    await expect(page).toHaveTitle(myTitle)
+    await expect.soft(page).toHaveURL(process.env.OPENCART_HOME_URL as string)
+    await expect.soft(page).toHaveTitle(myTitle)
 
     await page.screenshot({path: 'screenshots/naveenautomationlabs.png'})
     await page.close()

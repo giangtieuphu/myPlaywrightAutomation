@@ -18,7 +18,7 @@ test('orangeHRM Login Logout test', async ({ page }) => {
     expect.soft(await homePage.isProfilePictureVisible()).toBeTruthy()
   })
   await test.step('Verify the URL after login', async() => {
-    await expect(page).toHaveURL(process.env.ORANGEHRM_HOME_URL as string)
+    await expect.soft(page).toHaveURL(process.env.ORANGEHRM_HOME_URL as string)
   })
   await test.step('Logout from OrangeHRM', async() => {
     await homePage.logOut()
@@ -27,7 +27,7 @@ test('orangeHRM Login Logout test', async ({ page }) => {
     expect.soft(await homePage.isProfilePictureVisible()).toBeFalsy()
   })
   await test.step('Verify that the login form is displayed', async() => {
-    expect(await loginPage.isLoginFormVisible()).toBeTruthy()
+    expect.soft(await loginPage.isLoginFormVisible()).toBeTruthy()
   })
   await page.close()
 })

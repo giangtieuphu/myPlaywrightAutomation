@@ -10,7 +10,7 @@ test('Saving OrangeHRM login session', async ({page}) => {
     await loginPage.login('Admin', 'admin123')
     const homePage = new HomePage(page) 
     await page.context().storageState({path: authFile})
-    await page.close()               
+    await page.close()
 })
 
 test('Opening orangeHRM with authentication file', async ({browser}) => {
@@ -18,6 +18,6 @@ test('Opening orangeHRM with authentication file', async ({browser}) => {
     const page = await context.newPage()
     const homePage = new HomePage(page)
     await homePage.navigateToHomePage()
-    expect(await homePage.isProfilePictureVisible()).toBeTruthy()
+    expect.soft(await homePage.isProfilePictureVisible()).toBeTruthy()
     await page.close() 
 })
