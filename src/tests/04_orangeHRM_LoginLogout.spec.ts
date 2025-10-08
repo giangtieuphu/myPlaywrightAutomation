@@ -2,9 +2,10 @@ import { test, expect } from '@playwright/test'
 import LoginPage from '../pages/loginPage'
 import HomePage from '../pages/homePage'
 
-test('orangeHRM Login Logout test', async ({ page }) => {
+test('orangeHRM Login-Logout test', async ({ page }) => {
   const loginPage = new LoginPage(page)
   const homePage = new HomePage(page)
+  
   await test.step('Go to OrangeHRM login page', async () => {
     await loginPage.goToLoginPage()
   })
