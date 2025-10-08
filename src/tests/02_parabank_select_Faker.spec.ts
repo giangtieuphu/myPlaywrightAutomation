@@ -3,7 +3,7 @@ import {faker} from '@faker-js/faker'
 
 const firstname = faker.person.firstName()
 const lastname = faker.person.lastName()
-const username = faker.internet.username()
+const username = firstname + '_' + lastname
 const password = faker.internet.password()
 const fakeSSN = `${faker.string.numeric(3)}-${faker.string.numeric(2)}-${faker.string.numeric(4)}`
 const streetAddress = faker.location.streetAddress()
@@ -12,7 +12,7 @@ const state = faker.location.state()
 const zipCode = faker.location.zipCode()
 const phoneNumber = faker.phone.number()
 
-test('Register a new user - Just run one time!', async ({page}) => {
+test('New user registration test', async ({page}) => {
     await page.goto('https://parabank.parasoft.com/')
     const registerLink = page.getByRole('link', { name: 'Register' })
     await registerLink.click()
@@ -33,8 +33,12 @@ test('Register a new user - Just run one time!', async ({page}) => {
     await page.getByRole('button', { name: 'Register' }).click()
     await page.waitForLoadState('networkidle')
 
-    console.log(await page.locator('h1[class="title"]').innerText())
-    expect(page.getByText('Your account was created successfully. You are now logged in.')).toBeVisible()
+
+    const welcomeMsg = `Welcome ${username}`
+    expect.soft(await page.locator('h1[class="title"]').innerText()).toBe(welcomeMsg)
+
+    const registrationMsg = 'Your account was created successfully. You are now logged in.'
+    expect.soft(await page.locator('//div[@id="rightPanel"]/p').innerText()).toBe(registrationMsg)
 })
 
 test('Playwright select with Parabank app', async ({page}) => {
